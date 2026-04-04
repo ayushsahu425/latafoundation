@@ -43,16 +43,7 @@
 <body>
 
     <!-- Page loader Start -->
-    <div id="pageloader">   
-        <div class="loader-item">
-            <div class="loader">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-              </div>
-        </div>
-    </div>
+   
     <!-- Page loader End -->
 
     <!-- Header Start -->
@@ -97,7 +88,7 @@
                 <div class="d-inline-flex request-btn order-lg-last col-auto p-0 align-items-center"> 
                     <a class="btn-outline-primary btn ms-3" href="#" id="search_home"><i data-feather="search"></i></a>
 
-                    <a class="nav-link btn btn-default ms-3 donate-btn" href="donation-page.html">Donate</a>
+                  <a href="#" id="openDonateModalBtn" class="nav-link btn btn-default ms-3 donate-btn">Donate</a>
 
                     <!-- Toggle Button Start -->
                     <button class="navbar-toggler x collapsed" type="button" data-bs-toggle="collapse"
@@ -122,64 +113,18 @@
                     <!-- Mobile Menu -->
                     <div class="offcanvas-body">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link has-children" href="index.html" id="dropdown03" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home </a>                
-                                <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                                    <li><a class="dropdown-item" href="index.html">Home Layout 1</a></li>
-                                    <li><a class="dropdown-item" href="index-2.html">Home Layout 2</a></li>
-                                    <li><a class="dropdown-item" href="index-3.html">Home Layout 3</a></li>
-                                    <li class="dropdown dropdown-submenu">
-                                        <a class="dropdown-item has-children" href="#">Third Level Menu</a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a href="#" class="dropdown-item">Action</a></li>
-                                            <li><a href="#" class="dropdown-item">Another action</a></li>
-                                            <li><a href="#" class="dropdown-item">Something else here</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
+                           <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li> <li class="nav-item">
                                 <a class="nav-link" href="about-us.html">About Us</a>
+                            </li> <li class="nav-item">
+                                <a class="nav-link" href="causes-list.html">Causes</a>
+                            </li> <li class="nav-item">
+                                <a class="nav-link" href="#">Gallery</a>
+                            </li> <li class="nav-item">
+                                <a class="nav-link" href="contact-us.html">Contact Us</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link has-children" href="index.html" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Causes </a>
-                                <ul class="dropdown-menu">                  
-                                    <li><a class="dropdown-item" href="causes-list.html">Causes List</a></li>
-                                    <li><a class="dropdown-item" href="causes-single.html">Causes Single</a></li>                
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link has-children" href="index.html" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="volunteers.html">Volunteers</a></li>
-                                    <li><a class="dropdown-item" href="become-volunteers.html">Become Volunteers</a></li>
-                                    <li><a class="dropdown-item" href="donation-page.html">Donation Page</a></li>
-                                    <li><a class="dropdown-item" href="shortcodes-element.html">Shortcode Elements</a></li>
-                                    <li><a class="dropdown-item" href="typography.html">Typography</a></li> 
-                                    <li><a class="dropdown-item" href="our-faqs.html">Our Faq's</a></li>
-                                    <li><a class="dropdown-item" href="404-page.html">404 Page</a></li>                  
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link has-children" href="index.html" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="events-list.html">Events List</a></li>
-                                    <li><a class="dropdown-item" href="events-alternate.html">Events Alternate</a></li>
-                                    <li><a class="dropdown-item" href="events-single.html">Events Single</a></li>
-                                </ul>
-                            </li>                        
-                            <li class="nav-item dropdown">
-                                <a class="nav-link has-children" href="index.html" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog </a>
-    
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="blog-standard.html">Blog Standard</a></li>
-                                    <li><a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
-                                    <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">Contact</a>
-                            </li>
+                            
                             
                         </ul>
                     </div>
@@ -192,6 +137,332 @@
         <!-- Main Navigation End -->
     </header>
     <!-- Header Start -->
+
+<!-- pop up modal  -->
+
+
+    <div id="donationModalOverlay" class="modal-overlay">
+    <div class="modal-card">
+        
+        <button id="closeModalBtn" class="close-btn">&times;</button>
+
+        <div class="modal-header-custom">
+            <span class="pulse-badge">Urgent Support Needed</span>
+            <h2>Make a Difference Today</h2>
+            <p>Your contribution directly empowers underprivileged children with free education and healthcare.</p>
+        </div>
+
+        <div class="modal-body-custom">
+            
+            <div class="online-pay-section text-center">
+               
+                <div class="mt-2 text-center">
+                    <img src="assets/images/razorpay.png" alt="Secure Payments" style="height: 50px; width: 160px;">
+                </div>
+            </div>
+
+
+        
+            <div class="modal-divider">
+                <span>OR DIRECT BANK TRANSFER</span>
+            </div>
+
+            <div class="bank-details-box">
+                <div class="bank-row">
+                    <span class="b-label">Bank:</span>
+                    <span class="b-value fw-bold">State Bank of India</span>
+                </div>
+                <div class="bank-row">
+                    <span class="b-label">Name:</span>
+                    <span class="b-value">Smt. Lata Education & Welfare Trust</span>
+                </div>
+                <div class="bank-row highlight-row">
+                    <span class="b-label">A/C No:</span>
+                    <span class="b-value fw-bold copy-hover" id="modalAccNum" title="Click to copy">
+                        42630622569 <i class="icofont-copy text-muted small ml-1"></i>
+                    </span>
+                </div>
+                <div class="bank-row">
+                    <span class="b-label">IFSC:</span>
+                    <span class="b-value fw-bold">SBIN0016410</span>
+                </div>
+            </div>
+            
+            <p class="modal-footer-text">Donations are 50% Tax Exempt under Section 80G.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Base Overlay Styles */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(6, 22, 58, 0.85); /* Navy Blue transparent */
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Show Modal Class */
+    .modal-overlay.show-modal {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Modal Card Container */
+    .modal-card {
+        background: #fff;
+        width: 90%;
+        max-width: 450px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        transform: translateY(30px) scale(0.95);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+    }
+
+    .modal-overlay.show-modal .modal-card {
+        transform: translateY(0) scale(1);
+    }
+
+    /* Close Button */
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+        border: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        font-size: 24px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.3s ease;
+    }
+
+    .close-btn:hover {
+        background: #fff;
+        color: #d4a30e;
+        transform: rotate(90deg);
+    }
+
+    /* Header styling */
+    .modal-header-custom {
+        background: linear-gradient(135deg, #c7d1e7 0%, #a79228 100%);
+        padding: 40px 30px 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .pulse-badge {
+        display: inline-block;
+        background: #F7A71E; /* Golden Yellow */
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        animation: pulseModal 2s infinite;
+    }
+
+    .modal-header-custom h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .modal-header-custom p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Body styling */
+    .modal-body-custom {
+        padding: 30px;
+        background: #fdfdfd;
+    }
+
+    .btn-razorpay {
+        display: block;
+        width: 100%;
+        background: #28a745;
+        color: #fff;
+        padding: 14px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .btn-razorpay:hover {
+        background: #1e7e34;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
+    }
+
+    .modal-divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 25px 0;
+        color: #a0a0a0;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .modal-divider::before, .modal-divider::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .modal-divider span {
+        padding: 0 15px;
+    }
+
+    /* Bank Details styling */
+    .bank-details-box {
+        background: #fff;
+        border: 1px dashed #ced4da;
+        border-radius: 10px;
+        padding: 15px 20px;
+    }
+
+    .bank-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .bank-row:last-child {
+        border-bottom: none;
+    }
+
+    .b-label { color: #666; }
+    .b-value { color: #333; text-align: right; }
+    
+    .highlight-row {
+        background: rgba(247, 167, 30, 0.1);
+        padding: 8px 10px;
+        margin: 0 -10px;
+        border-radius: 4px;
+    }
+
+    .highlight-row .b-value {
+        color: #F7A71E;
+        font-size: 15px;
+    }
+
+    .copy-hover { cursor: pointer; transition: 0.2s; }
+    .copy-hover:hover { opacity: 0.7; }
+
+    .modal-footer-text {
+        text-align: center;
+        font-size: 11px;
+        color: #888;
+        margin: 20px 0 0;
+    }
+
+    @keyframes pulseModal {
+        0% { box-shadow: 0 0 0 0 rgba(247, 167, 30, 0.7); }
+        70% { box-shadow: 0 0 0 8px rgba(247, 167, 30, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(247, 167, 30, 0); }
+    }
+
+    @media (max-width: 480px) {
+        .modal-header-custom { padding: 30px 20px 15px; }
+        .modal-body-custom { padding: 20px; }
+        .bank-row { flex-direction: column; text-align: center; }
+        .b-value { text-align: center; margin-top: 3px; }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const modalOverlay = document.getElementById('donationModalOverlay');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const accNumCopy = document.getElementById('modalAccNum');
+        
+        // Find the Donate button we just updated
+        const openModalBtn = document.getElementById('openDonateModalBtn');
+
+        // Function to open modal
+        function openModal() {
+            modalOverlay.classList.add('show-modal');
+        }
+
+        // 1. Open modal when the Donate button is clicked
+        if(openModalBtn) {
+            openModalBtn.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevents the page from jumping to the top
+                openModal();
+            });
+        }
+
+        // 2. Optional: Keep the auto-popup on page load (removes this if you ONLY want it on button click)
+        setTimeout(openModal, 1500);
+
+        // Close modal when clicking the 'X'
+        if(closeModalBtn) {
+            closeModalBtn.addEventListener('click', function() {
+                modalOverlay.classList.remove('show-modal');
+            });
+        }
+
+        // Close modal when clicking outside the card overlay
+        modalOverlay.addEventListener('click', function(e) {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('show-modal');
+            }
+        });
+
+        // Copy Account Number to clipboard functionality
+        if(accNumCopy) {
+            accNumCopy.addEventListener('click', function() {
+                const textToCopy = "42630622569"; 
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    const originalHTML = this.innerHTML;
+                    this.innerHTML = `${textToCopy} <i class="icofont-check-alt text-success ml-1"></i> Copied!`;
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalHTML;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+            });
+        }
+    });
+</script>
+
+<!-- pop up modal  -->
 
     <!-- Banner Start -->
     <section class="main-banner home-style-second">
@@ -217,8 +488,8 @@ can touch lives far beyond our imagination.
 
 
                                     <div class="owl-slide-animated owl-slide-cta">                                        
-                                        <a class="btn btn-default me-3" href="causes-list.html" role="button">Join Us Now</a>
-                                        <a class="slider-link popup-video" href="https://player.vimeo.com/video/7449107">Watch the video <i class="charity-play_button"></i></a>
+                                        <a class="btn btn-default me-3" href="about-us.html" role="button">About Us</a>
+                                        <!-- <a class="slider-link popup-video" href="https://player.vimeo.com/video/7449107">Watch the video <i class="charity-play_button"></i></a> -->
                                     </div>
                                 </div>
                             </div>
@@ -380,7 +651,7 @@ families prioritize their children's learning
 and future development.
 </p>
                                 <div class="btn-wrap">
-                                    <a class="btn-primary btn" href="causes-single.html">Donate Now</a>
+                                    <a class="btn-primary btn" id="openDonateModalBtn">Donate Now</a>
                                 </div>
                             </div>
                         </div>
@@ -415,7 +686,7 @@ programs for children, providing them with
 opportunities to improve their physical
 fitness, mental strength, and overall wellbeing.</p>
                                 <div class="btn-wrap">
-                                    <a class="btn-primary btn" href="causes-single.html">Donate Now</a>
+                                    <a class="btn-primary btn" id="openDonateModalBtn">Donate Now</a>
                                 </div>
                             </div>
                         </div>
@@ -450,7 +721,7 @@ to inspire students to explore the world of
 science through practical learning,
 innovation, and hands-on experimentation.</p>
                                 <div class="btn-wrap">
-                                    <a class="btn-primary btn" href="causes-single.html">Donate Now</a>
+                                    <a class="btn-primary btn" id="openDonateModalBtn">Donate Now</a>
                                 </div>
                             </div>
                         </div>
@@ -485,7 +756,7 @@ opportunities to express their talents and
 celebrate the richness of art, tradition, and
 creativity.</p>
                                 <div class="btn-wrap">
-                                    <a class="btn-primary btn" href="causes-single.html">Donate Now</a>
+                                    <a class="btn-primary btn" id="openDonateModalBtn">Donate Now</a>
                                 </div>
                             </div>
 
@@ -525,7 +796,7 @@ communities while promoting dignity and care for
 those in need.
 </p>
                                 <div class="btn-wrap">
-                                    <a class="btn-primary btn" href="causes-single.html">Donate Now</a>
+                                    <a class="btn-primary btn" id="openDonateModalBtn">Donate Now</a>
                                 </div>
                             </div>
 
@@ -562,7 +833,7 @@ reflects our commitment to creating a clean,
 healthy, and eco-friendly environment for
 present and future generations.</p>
                                 <div class="btn-wrap">
-                                    <a class="btn-primary btn" href="causes-single.html">Donate Now</a>
+                                    <a class="btn-primary btn" id="openDonateModalBtn">Donate Now</a>
                                 </div>
                             </div>
 
@@ -585,19 +856,58 @@ present and future generations.</p>
 
         <!-- Callout Style Start -->
         <section class="wide-tb-100 bg-scroll bg-img-1 pos-rel callout-style-1">
-            <div class="bg-overlay black opacity-50"></div>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <h1 class="heading-main light-mode orange">
-                            <small>Help Other People</small>
-                            We Dream to Create A Bright Future Of The Underprivileged Children
-                        </h1>
-                        <a href="donation-page.html" class="btn btn-default">Donate Now</a>
+    <div class="bg-overlay black opacity-50"></div>
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 col-md-12 mb-5 mb-lg-0">
+                <h1 class="heading-main light-mode orange">
+                    <small>Help Other People</small>
+                    We Dream to Create A Bright Future Of The Underprivileged Children
+                </h1>
+                <p class="text-white mb-4" style="font-size: 1.1rem; opacity: 0.9; max-width: 90%;">
+                    Your contribution directly impacts lives. Support our mission through a direct bank transfer or use our secure online payment portal.
+                </p>
+                <a href="openDonateModalBtn" class="btn btn-default">Donate Now</a>
+            </div>
+
+            <div class="col-lg-5 col-md-12">
+                <div class="bank-donation-card">
+                    <div class="card-header-creative">
+                        <h3>Direct Bank Transfer</h3>
+                        <p>Fast, secure, and zero processing fees.</p>
+                    </div>
+                    <div class="card-body-creative">
+                        <ul class="bank-info-list">
+                            <li>
+                                <span class="label">Bank Name:</span>
+                                <span class="value">State Bank of India</span>
+                            </li>
+                            <li>
+                                <span class="label">Account Name:</span>
+                                <span class="value">Lata Foundation and Welfare</span>
+                            </li>
+                            <li>
+                                <span class="label">Account No:</span>
+                                <span class="value fw-bold highlight">42630622569</span>
+                            </li>
+                            <li>
+                                <span class="label">IFSC Code:</span>
+                                <span class="value fw-bold">SBIN0016410</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="upi-section">
+                            <span class="upi-label">UPI ID:</span>
+                            <span class="upi-id">foundation@sbi</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+        </div>
+    </div>
+</section>
         <!-- Callout Style End -->
 
 
@@ -791,7 +1101,7 @@ the lives of many.
                                         <h2>Let Us Come Together To Make A Difference</h2>
                                     </div>
                                     <div class="icon">
-                                        <a href="donation-page.html" class="btn btn-default">Donate Now</a>
+                                        <a href="openDonateModalBtn" class="btn btn-default">Donate Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -807,114 +1117,67 @@ the lives of many.
     </main>
 
    <!-- Main Footer Start -->
-    <footer class="wide-tb-70 pb-0 mb-spacer-md">
-        <div class="container pos-rel">
-            <div class="row">
-                <div class="col-lg-5 col-md-10">
-                    <div class="footer-subscribe">
-                        <h3>Newsletter</h3>
-                        <h2>Get Update Every Week</h2>
-                        <div class="input-wrap">
-                            <input type="text" name="name" placeholder="Enter Your Email">
-                            <button type="submit" class="btn btn-default">Subscribe now</button>
-                        </div>
-                    </div>  
+    <footer class="footer-compact" style="background-color: #06163A; color: #fff; padding: 50px 0 0;">
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="logo-footer mb-3">
+                    <img src="assets/images/logo_white.svg" alt="Smt Lata Trust Logo" style="max-width: 180px;">
                 </div>
-                <div class="give-us-call">
-                    <i data-feather="phone"></i>
-                    <h4>Give us a call</h4>
-                    <h3>+1234567899</h3>
+                <p style="font-size: 14px; opacity: 0.8; line-height: 1.5; margin-bottom: 20px;">
+                    Empowering underprivileged communities through education and healthcare since 2006.
+                </p>
+                <div class="social-icons">
+                    <ul class="list-unstyled d-flex gap-2">
+                        <li><a href="#" class="social-link-small"><i class="icofont-facebook"></i></a></li>
+                        <li><a href="#" class="social-link-small"><i class="icofont-instagram"></i></a></li>
+                        <li><a href="#" class="social-link-small"><i class="icofont-youtube-play"></i></a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="row">
-                <!-- Column First -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="logo-footer">
-                        <a href="index.html">
-                            <img src="assets/images/logo_white.svg" alt="">
-                        </a>
-                    </div>
-                    <p>This is Photoshop’s version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet</p>
-                    <div class="social-icons">
-                        <ul class="list-unstyled list-group list-group-horizontal">
-                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                            <li><a href="#"><i class="icofont-behance"></i></a></li>
-                            <li><a href="#"><i class="icofont-youtube-play"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Column First -->
 
-                <!-- Column Second -->
-                <div class="col-lg-4 col-md-6">
-                    <h3 class="footer-heading">Contact Info</h3>
-
-                    <div class="footer-widget-contact">
-                        <ul class="list-unstyled">
-                            <li>
-                                <div><i data-feather="map-pin"></i> </div>
-                                <div>Envato Pty Ltd, 13/2 Elizabeth St Melbourne VIC 3000, Australia</div>
-                            </li>
-                            <li>
-                                <div><i data-feather="phone"></i> </div>
-                                <div><a href="tel:+1234567899">+1234567899</a></div>
-                            </li>
-                            <li>
-                                <div><i data-feather="mail"></i> </div>
-                                <div><a href="https://mannatstudio.com/cdn-cgi/l/email-protection#ff96919990bf97908f9a8d9e968c9ad19c9092"><span class="__cf_email__" data-cfemail="224b4c444d624a4d524750434b51470c414d4f">[email&#160;protected]</span></a></div>
-                            </li>
-                            <li>
-                                <div><i data-feather="clock"></i> </div>
-                                <div>Mon-Fri  /  9:00 AM - 19:00 PM</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>                
-                <!-- Column Second -->
-
-                <!-- Spacer For Medium -->
-                <div class="w-100 d-none d-md-block d-lg-none spacer-30"></div>
-                <!-- Spacer For Medium -->
-
-                <!-- Column Third -->
-                <div class="col-lg-2 col-md-6">
-                    <h3 class="footer-heading">Explore Us</h3>
-                    <div class="footer-widget-menu">
-                        <ul class="list-unstyled">
-                            <li><a href="#"><i class="icofont-simple-right"></i> <span>About Us</span></a></li>
-                            <li><a href="#"><i class="icofont-simple-right"></i> <span>Our History</span></a></li>
-                            <li><a href="#"><i class="icofont-simple-right"></i> <span>Our Services</span></a></li>
-                            <li><a href="#"><i class="icofont-simple-right"></i> <span>Meet Doctors</span></a></li>
-                            <li><a href="#"><i class="icofont-simple-right"></i> <span>Success History</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Column Third -->
-
-                <!-- Column Fourth -->
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="footer-heading">Photo Gallery</h3>
-                    <ul id="basicuse" class="photo-thumbs"></ul>
-                </div>
-                <!-- Column Fourth -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h4 class="footer-h">Contact Us</h4>
+                <ul class="list-unstyled footer-list">
+                    <li><i data-feather="map-pin"></i> Gulbarga, Karnataka</li>
+                    <li><i data-feather="phone"></i> +91 99725 15782</li>
+                    <li><i data-feather="mail"></i> anilchavan19705@gmail.com</li>
+                </ul>
             </div>
-        </div>  
 
-        <div class="copyright-wrap">
-            <div class="container pos-rel">
-                <div class="row text-md-start text-center">
-                    <div class="col-sm-12 col-md-auto copyright-text">
-                        © Copyright <span class="txt-blue">Gracious</span> <span id="yearText"></span>.   |   Created by <a href="https://mannatstudio.com/" target="_blank">MannatStudio</a>
-                    </div>
-                    <div class="col-sm-12 col-md-auto ms-md-auto text-md-end text-center copyright-links">
-                        <a href="#">Terms & Condition</a> | <a href="#">Privacy Policy</a> | <a href="#">Legal</a>
-                    </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h4 class="footer-h">What We Do</h4>
+                <ul class="list-unstyled footer-list">
+                    <li><a href="#">Free Education</a></li>
+                    <li><a href="#">Health Checkups</a></li>
+                    <li><a href="#">Food Distribution</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-12 mb-4">
+                <h4 class="footer-h">Support Us</h4>
+                <a href="openDonateModalBtn" class="btn-donate-sm">Donate Now</a>
+                <div class="mt-3">
+                    <span class="trust-tag">80G Certified</span>
+                    <span class="trust-tag">CSR-1 Reg.</span>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <div style="background: rgba(0,0,0,0.3); padding: 15px 0; margin-top: 20px;">
+        <div class="container">
+            <div class="row align-items-center" style="font-size: 13px; opacity: 0.7;">
+                <div class="col-md-6 text-center text-md-start">
+                    © 2024 Smt. Lata Education and Welfare Trust.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" style="color: #fff; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #fff; text-decoration: none;">Terms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
     <!-- Main Footer End -->
 
     <!-- Search Popup Start -->
